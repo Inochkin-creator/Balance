@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class var
 {
@@ -35,7 +36,13 @@ public class cubes_movement : MonoBehaviour
         Player = GetComponent<Rigidbody>(); 
         
         if (SceneManager.GetActiveScene().name == "play")
+        {
             Platform = Plane.GetComponent<Rigidbody>();
+            float x = Random.Range(-2.5f, 2.5f);
+            float z = Random.Range(-2.5f, 2.5f);
+            Vector3 position = new Vector3(x, 5, z);
+            Player.position = position;
+        }
 
         if (var.CorS == 1)
         {
