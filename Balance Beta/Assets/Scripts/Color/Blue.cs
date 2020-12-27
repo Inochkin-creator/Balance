@@ -8,7 +8,7 @@ public class Blue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Renderer>().material.color = new Color(1, 2, 3);
+        GetComponent<Renderer>().material.color = new Color32(1, 2, 3, 255);
     }
 
     void Update()

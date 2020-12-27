@@ -8,7 +8,7 @@ public class Red : MonoBehaviour
     
     void Start()
     {
-        GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+        GetComponent<Renderer>().material.color = new Color32(255, 0, 0, 255);
     }
 
     void Update()
@@ -33,7 +33,7 @@ public class Red : MonoBehaviour
                 if(hit.transform.name == "Red Sphere")
                 {
                     var.r = 255;
-                    var.g = 27;
+                    var.g = 0;
                     var.b = 0;
                     var.CorS = 1;
                     var.standartColor = false;
