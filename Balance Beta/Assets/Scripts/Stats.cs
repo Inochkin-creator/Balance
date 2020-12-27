@@ -11,11 +11,11 @@ public class Stats : MonoBehaviour
     void Start()
     {
         THS.text = "Total high score: " + PlayerPrefs.GetInt("TotalHighScore");
-        CHS.text = "Cube high score: " + PlayerPrefs.GetInt("CubeHighScore"); 
-        SHS.text = "Sphere high score: " + PlayerPrefs.GetInt("SphereHighScore"); 
+        CHS.text = "High score (Cube): " + PlayerPrefs.GetInt("CubeHighScore"); 
+        SHS.text = "High score (Sphere): " + PlayerPrefs.GetInt("SphereHighScore"); 
         TGP.text = "Total games played: " + PlayerPrefs.GetFloat("TotalGamesPlayed");
-        CGP.text = "On cube games played: " + PlayerPrefs.GetFloat("CubeGamesPlayed");
-        SGP.text = "On sphere games played: " + PlayerPrefs.GetFloat("SphereGamesPlayed"); 
+        CGP.text = "Games played (Cube): " + PlayerPrefs.GetFloat("CubeGamesPlayed");
+        SGP.text = "Games played (Sphere): " + PlayerPrefs.GetFloat("SphereGamesPlayed"); 
     }
 
     void Update()
