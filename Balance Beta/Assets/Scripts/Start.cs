@@ -12,6 +12,6 @@ public class Start : MonoBehaviour
             SceneManager.LoadScene("play");
 
         if (Input.GetKeyDown(KeyCode.Escape))
-            SceneManager.LoadScene("skins");
+            SceneManager.LoadScene("Menu");
     }
 }

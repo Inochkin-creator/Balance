@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Skins.unity
     guid: 49cb7aa79530d104aa35264aeaed575b
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: f1e76d7c17918ad4696ffd9c3c4df6f6
+  - enabled: 1
+    path: Assets/Scenes/Statistics.unity
+    guid: 70b51864b7cea944ba74c6926adf1754
   m_configObjects: {}

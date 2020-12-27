@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Red : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
         GetComponent<Renderer>().material.color = new Color(255, 0, 0);
@@ -26,15 +27,17 @@ public class Red : MonoBehaviour
                     var.b = 0;
                     var.CorS = 0;
                     var.standartColor = false;
+                    SceneManager.LoadScene("Menu");
                 }
 
                 if(hit.transform.name == "Red Sphere")
                 {
                     var.r = 255;
-                    var.g = 0;
+                    var.g = 27;
                     var.b = 0;
                     var.CorS = 1;
                     var.standartColor = false;
+                    SceneManager.LoadScene("Menu");
                 }
             }
         }

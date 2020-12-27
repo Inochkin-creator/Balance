@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Green : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class Green : MonoBehaviour
                     var.b = 0;
                     var.CorS = 0;
                     var.standartColor = false;
+                    SceneManager.LoadScene("Menu");
                 }
 
                 if(hit.transform.name == "Green Sphere")
@@ -35,6 +37,7 @@ public class Green : MonoBehaviour
                     var.b = 0;
                     var.CorS = 1;
                     var.standartColor = false;
+                    SceneManager.LoadScene("Menu");
                 }
             }
         }

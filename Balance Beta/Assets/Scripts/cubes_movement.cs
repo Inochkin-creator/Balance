@@ -43,26 +43,47 @@ public class cubes_movement : MonoBehaviour
             Vector3 position = new Vector3(x, 5, z);
             Player.position = position;
         }
+            
+        if (SceneManager.GetActiveScene().name == "play")
+        {
+            if (var.CorS == 0)
+                PlayerPrefs.SetFloat("CubeGamesPlayed", PlayerPrefs.GetFloat("CubeGamesPlayed", 0) + 1);
+            if (var.CorS == 1)
+                PlayerPrefs.SetFloat("SphereGamesPlayed", PlayerPrefs.GetFloat("SphereGamesPlayed", 0) + 0.5f);
+            PlayerPrefs.SetFloat("TotalGamesPlayed", 
+                PlayerPrefs.GetFloat("CubeGamesPlayed", 0) + PlayerPrefs.GetFloat("SphereGamesPlayed", 0));
+        }
+
+        if (!var.standartColor)
+            Player.GetComponent<Renderer>().material.color = new Color(var.r, var.g, var.b);
 
         if (var.CorS == 1)
         {
             Cube.SetActive(false);
             Sphere.SetActive(true);
         }
-
-        if (!var.standartColor)
-            Player.GetComponent<Renderer>().material.color = new Color(var.r, var.g, var.b);
     }
 
     void Update()
     {       
-
-        if (score != 0)
-            Score.text = "Score: " + score / 2;
-        highScore.text = "High score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
-
+        
         if (SceneManager.GetActiveScene().name == "play")
         {
+            if (score != 0)
+                Score.text = "Score: " + score / 2;
+            if (var.CorS == 0)
+            {
+                PlayerPrefs.SetInt("CubeHighScore", Math.Max(score / 2, PlayerPrefs.GetInt("CubeHighScore")));
+                highScore.text = "High score: " + PlayerPrefs.GetInt("CubeHighScore", 0).ToString();
+            }
+            if (var.CorS == 1)
+            {
+                PlayerPrefs.SetInt("SphereHighScore", Math.Max(score / 2, PlayerPrefs.GetInt("SphereHighScore")));
+                highScore.text = "High score: " + PlayerPrefs.GetInt("SphereHighScore", 0).ToString();
+            }
+            PlayerPrefs.SetInt("TotalHighScore", 
+                Math.Max(PlayerPrefs.GetInt("SphereHighScore"), PlayerPrefs.GetInt("CubeHighScore")));
+
             if (!flag)     
             {
                 frames++;
@@ -70,21 +91,24 @@ public class cubes_movement : MonoBehaviour
                     score += t;
                 if (frames % 150 == 0)
                 {
-                    t++;
                     if (Platform.mass > 25)
-                    Platform.mass -= 0.5F;
+                        Platform.mass -= 0.5F;
                 }
                 if (frames % 300 == 0)
                 {
                     t++;
                     if (Player.mass < 2)
-                    Player.mass += 0.025F;
+                        Player.mass += 0.025F;
+                }
+                if (frames % 1800 == 0)
+                {
+                    t++;
+                    if (Player.mass < 2.5)
+                        Player.mass += 0.025F;
+                    if (Platform.mass > 10)
+                        Platform.mass -= 0.25F;
                 }
             }
-            
-            if (score != 0)
-                Score.text = "Score: " + score / 2;
-            highScore.text = "High score: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
 
             if (Input.GetKey(KeyCode.Space) && isGround)
             {
@@ -106,17 +130,13 @@ public class cubes_movement : MonoBehaviour
         }
     }
 
-    
-
     private void OnCollisionEnter (Collision col)
     {
         if (col.gameObject.tag == "platform") isGround = true;
 
         if (col.gameObject.tag == "lose-platform") 
         {
-            PlayerPrefs.SetInt("HighScore", Math.Max(score / 2, PlayerPrefs.GetInt("HighScore")));
-            EndText.SetActive(true); flag = true; score = 0;
-            //PlayerPrefs.DeleteAll();
+            EndText.SetActive(true); flag = true; 
         }
     } 
 }

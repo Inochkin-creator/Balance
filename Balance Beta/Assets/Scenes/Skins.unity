@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 121529096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: 2.5, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 121529096}
 --- !u!1 &154148814
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +307,7 @@ GameObject:
   - component: {fileID: 609850488}
   - component: {fileID: 609850487}
   - component: {fileID: 609850491}
+  - component: {fileID: 609850492}
   m_Layer: 0
   m_Name: Blue Sphere
   m_TagString: Untagged
@@ -382,7 +384,7 @@ Transform:
   m_GameObject: {fileID: 609850486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5, y: -2, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -399,6 +401,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2efb37bd0b4eed4a9e76ac285f50fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &609850492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609850486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 609850486}
 --- !u!1 &616788451
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,6 +427,7 @@ GameObject:
   - component: {fileID: 616788453}
   - component: {fileID: 616788452}
   - component: {fileID: 616788456}
+  - component: {fileID: 616788457}
   m_Layer: 0
   m_Name: Red Sphere
   m_TagString: Untagged
@@ -488,7 +504,7 @@ Transform:
   m_GameObject: {fileID: 616788451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: -2, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -505,6 +521,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992646b203611ef4bbd805441048cb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &616788457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616788451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 616788451}
 --- !u!1 &681124873
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +630,7 @@ GameObject:
   - component: {fileID: 957980309}
   - component: {fileID: 957980308}
   - component: {fileID: 957980312}
+  - component: {fileID: 957980313}
   m_Layer: 0
   m_Name: Standart Sphere
   m_TagString: Untagged
@@ -677,7 +707,7 @@ Transform:
   m_GameObject: {fileID: 957980307}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10, y: -2, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -694,6 +724,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 957980307}
+--- !u!114 &957980313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957980307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 957980307}
 --- !u!1 &1141988527
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +751,7 @@ GameObject:
   - component: {fileID: 1141988529}
   - component: {fileID: 1141988528}
   - component: {fileID: 1141988532}
+  - component: {fileID: 1141988533}
   m_Layer: 0
   m_Name: Green Sphere
   m_TagString: Untagged
@@ -783,7 +828,7 @@ Transform:
   m_GameObject: {fileID: 1141988527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -800,6 +845,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261cef3250f2f17438226b369005257a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1141988533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141988527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1141988527}
 --- !u!1 &1204534632
 GameObject:
   m_ObjectHideFlags: 0
@@ -813,6 +871,7 @@ GameObject:
   - component: {fileID: 1204534636}
   - component: {fileID: 1204534635}
   - component: {fileID: 1204534633}
+  - component: {fileID: 1204534634}
   m_Layer: 0
   m_Name: Black Cube
   m_TagString: Untagged
@@ -832,6 +891,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3543928322bd49b4b9e239d80989814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1204534634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204534632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1204534632}
 --- !u!65 &1204534635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -901,7 +973,7 @@ Transform:
   m_GameObject: {fileID: 1204534632}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: 2.5, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -919,6 +991,7 @@ GameObject:
   - component: {fileID: 1271366185}
   - component: {fileID: 1271366184}
   - component: {fileID: 1271366182}
+  - component: {fileID: 1271366183}
   m_Layer: 0
   m_Name: Red Cube
   m_TagString: Untagged
@@ -938,6 +1011,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992646b203611ef4bbd805441048cb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1271366183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271366181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1271366181}
 --- !u!65 &1271366184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1007,7 +1093,7 @@ Transform:
   m_GameObject: {fileID: 1271366181}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 2.5, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1106,6 +1192,7 @@ GameObject:
   - component: {fileID: 1601077862}
   - component: {fileID: 1601077861}
   - component: {fileID: 1601077865}
+  - component: {fileID: 1601077866}
   m_Layer: 0
   m_Name: Black Sphere
   m_TagString: Untagged
@@ -1182,7 +1269,7 @@ Transform:
   m_GameObject: {fileID: 1601077860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10, y: -2, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -1199,6 +1286,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3543928322bd49b4b9e239d80989814b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1601077866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601077860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1601077860}
 --- !u!1 &1603952408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1212,6 +1312,7 @@ GameObject:
   - component: {fileID: 1603952412}
   - component: {fileID: 1603952411}
   - component: {fileID: 1603952409}
+  - component: {fileID: 1603952410}
   m_Layer: 0
   m_Name: Blue Cube
   m_TagString: Untagged
@@ -1231,6 +1332,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2efb37bd0b4eed4a9e76ac285f50fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1603952410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603952408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1603952408}
 --- !u!65 &1603952411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1300,7 +1414,7 @@ Transform:
   m_GameObject: {fileID: 1603952408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5, y: 2.5, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1410,6 +1524,7 @@ GameObject:
   - component: {fileID: 2040212932}
   - component: {fileID: 2040212931}
   - component: {fileID: 2040212929}
+  - component: {fileID: 2040212930}
   m_Layer: 0
   m_Name: Green Cube
   m_TagString: Untagged
@@ -1429,6 +1544,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261cef3250f2f17438226b369005257a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2040212930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040212928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92efb0b47b73f46b14d0f8226490b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2040212928}
 --- !u!65 &2040212931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1498,7 +1626,7 @@ Transform:
   m_GameObject: {fileID: 2040212928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.5, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3

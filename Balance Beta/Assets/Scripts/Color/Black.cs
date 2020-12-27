@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Black : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Black : MonoBehaviour
 
     void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -26,6 +28,7 @@ public class Black : MonoBehaviour
                     var.b = 0;
                     var.CorS = 0;
                     var.standartColor = false;
+                    SceneManager.LoadScene("Menu");
                 }
 
                 if(hit.transform.name == "Black Sphere")
@@ -35,6 +38,7 @@ public class Black : MonoBehaviour
                     var.b = 0;
                     var.CorS = 1;
                     var.standartColor = false;
+                    SceneManager.LoadScene("Menu");
                 }
             }
         }
