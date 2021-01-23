@@ -12,11 +12,14 @@ public class var
     public static int CorS = 0;
     public static int r, g, b;
     public static bool standartColor = true;
+    public static int rp, gp, bp;
+    public static bool standartColorp = true;
 }
 
 public class cubes_movement : MonoBehaviour
 {
     Rigidbody Player;
+    Rigidbody PlaneC;
     
     public GameObject Sphere;
     public GameObject Cube;
@@ -34,6 +37,7 @@ public class cubes_movement : MonoBehaviour
     {
         //Cursor.visible = false;
         Player = GetComponent<Rigidbody>(); 
+        PlaneC = GetComponent<Rigidbody>(); 
         
         if (SceneManager.GetActiveScene().name == "play")
         {
@@ -53,9 +57,12 @@ public class cubes_movement : MonoBehaviour
             PlayerPrefs.SetFloat("TotalGamesPlayed", 
                 PlayerPrefs.GetFloat("CubeGamesPlayed", 0) + PlayerPrefs.GetFloat("SphereGamesPlayed", 0));
         }
-
+        
         if (!var.standartColor)
             Player.GetComponent<Renderer>().material.color = new Color(var.r, var.g, var.b);
+        if (!var.standartColor)
+            PlaneC.GetComponent<Renderer>().material.color = new Color(var.rp, var.gp, var.bp);
+
 
         if (var.CorS == 1)
         {
