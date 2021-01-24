@@ -18,8 +18,8 @@ public class StandartP : MonoBehaviour
             {
                 if(hit.transform.name == "Standart")
                 {
-                    var.standartColor = true;
-                    
+                    var.standartColorp = true;
+                    var.logo = false;
                     SceneManager.LoadScene("Menu");
                 }
             }

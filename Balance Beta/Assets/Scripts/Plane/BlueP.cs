@@ -8,7 +8,7 @@ public class BlueP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Renderer>().material.color = new Color32(0, 0, 255, 255);
+        GetComponent<Renderer>().material.color = new Color(0, 0, 255);
     }
 
     void Update()
@@ -26,7 +26,7 @@ public class BlueP : MonoBehaviour
                     var.rp = 0;
                     var.gp = 0;
                     var.bp = 255;
-                    
+                    var.logo = false;
                     var.standartColorp = false;
                     SceneManager.LoadScene("Menu");
                 }

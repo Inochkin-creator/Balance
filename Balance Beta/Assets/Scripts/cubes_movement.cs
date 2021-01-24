@@ -14,21 +14,23 @@ public class var
     public static bool standartColor = true;
     public static int rp, gp, bp;
     public static bool standartColorp = true;
+    public static bool logo = false;
 }
 
 public class cubes_movement : MonoBehaviour
 {
     Rigidbody Player;
-    Rigidbody PlaneC;
     
     public GameObject Sphere;
     public GameObject Cube;
 
         Rigidbody Platform;
+        Rigidbody PlatformLogo;
         public TextMeshPro Score;
         public TextMeshPro highScore;
         public GameObject EndText;
         public GameObject Plane;
+        public GameObject PlaneLogo;
     
     int force = 500, score = 0, t = 1, frames = 0;
     bool isGround = false, flag = false;
@@ -36,12 +38,12 @@ public class cubes_movement : MonoBehaviour
     void Start()
     {
         //Cursor.visible = false;
-        Player = GetComponent<Rigidbody>(); 
-        PlaneC = GetComponent<Rigidbody>(); 
-        
+        Player = GetComponent<Rigidbody>();  
+        Platform = Plane.GetComponent<Rigidbody>();
+        PlatformLogo = PlaneLogo.GetComponent<Rigidbody>();
+
         if (SceneManager.GetActiveScene().name == "play")
         {
-            Platform = Plane.GetComponent<Rigidbody>();
             float x = Random.Range(-2.5f, 2.5f);
             float z = Random.Range(-2.5f, 2.5f);
             Vector3 position = new Vector3(x, 5, z);
@@ -60,8 +62,13 @@ public class cubes_movement : MonoBehaviour
         
         if (!var.standartColor)
             Player.GetComponent<Renderer>().material.color = new Color(var.r, var.g, var.b);
-        if (!var.standartColor)
-            PlaneC.GetComponent<Renderer>().material.color = new Color(var.rp, var.gp, var.bp);
+        if (!var.standartColorp)
+            Platform.GetComponent<Renderer>().material.color = new Color(var.rp, var.gp, var.bp);
+        if (var.logo)
+        {
+            PlaneLogo.SetActive(true);
+            Plane.SetActive(false);
+        }
 
 
         if (var.CorS == 1)
@@ -100,6 +107,8 @@ public class cubes_movement : MonoBehaviour
                 {
                     if (Platform.mass > 25)
                         Platform.mass -= 0.5F;
+                    if (PlatformLogo.mass > 25)
+                        PlatformLogo.mass -= 0.5F;
                 }
                 if (frames % 300 == 0)
                 {

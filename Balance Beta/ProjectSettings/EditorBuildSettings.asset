@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Statistics.unity
     guid: 70b51864b7cea944ba74c6926adf1754
+  - enabled: 1
+    path: Assets/Scenes/Skins Plane.unity
+    guid: 4bb14259c55d7224b897294f5b1ac7ea
   m_configObjects: {}

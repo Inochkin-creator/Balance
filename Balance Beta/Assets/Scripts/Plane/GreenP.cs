@@ -8,7 +8,7 @@ public class GreenP : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Renderer>().material.color = new Color32(0, 255, 0, 255);
+        GetComponent<Renderer>().material.color = new Color(0, 255, 0);
     }
 
     void Update()
@@ -25,7 +25,7 @@ public class GreenP : MonoBehaviour
                     var.rp = 0;
                     var.gp = 255;
                     var.bp = 0;
-                    
+                    var.logo = false;
                     var.standartColorp = false;
                     SceneManager.LoadScene("Menu");
                 }

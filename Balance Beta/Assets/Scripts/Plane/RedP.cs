@@ -8,7 +8,7 @@ public class RedP : MonoBehaviour
     
     void Start()
     {
-        GetComponent<Renderer>().material.color = new Color32(255, 0, 0, 255);
+        GetComponent<Renderer>().material.color = new Color(255, 0, 0);
     }
 
     void Update()
@@ -25,7 +25,7 @@ public class RedP : MonoBehaviour
                     var.rp = 255;
                     var.gp = 0;
                     var.bp = 0;
-                    
+                    var.logo = false;
                     var.standartColorp = false;
                     SceneManager.LoadScene("Menu");
                 }

@@ -8,10 +8,10 @@ public class Red : MonoBehaviour
     
     void Start()
     {
-        GetComponent<Renderer>().material.color = new Color32(255, 0, 0, 255);
+        GetComponent<Renderer>().material.color = new Color(255, 0, 0);
     }
 
-    void Update()
+    void Update() 
     {
         if (Input.GetMouseButtonDown(0))
         {
