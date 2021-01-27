@@ -13,5 +13,8 @@ public class End : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
             SceneManager.LoadScene("Menu");
+
+        if (Input.GetKeyDown(KeyCode.F))
+            Screen.fullScreen = !Screen.fullScreen;
     }
 }

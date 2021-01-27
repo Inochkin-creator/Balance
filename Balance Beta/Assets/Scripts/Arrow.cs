@@ -18,6 +18,9 @@ public class Arrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+            Screen.fullScreen = !Screen.fullScreen;
+            
         if (Input.GetKeyDown(KeyCode.RightArrow))
             SceneManager.LoadScene("Skins Plane");
         if (Input.GetKeyDown(KeyCode.LeftArrow))

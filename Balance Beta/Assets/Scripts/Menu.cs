@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.EventSystems;
+using System;
 
 public class Menu : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Menu : MonoBehaviour
     
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+            Screen.fullScreen = !Screen.fullScreen;
+
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Escape))
             SceneManager.LoadScene("scene1");
 

@@ -80,7 +80,9 @@ public class cubes_movement : MonoBehaviour
 
     void Update()
     {       
-        
+        if (Input.GetKeyDown(KeyCode.F))
+            Screen.fullScreen = !Screen.fullScreen;
+            
         if (SceneManager.GetActiveScene().name == "play")
         {
             if (score != 0)
